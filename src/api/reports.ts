@@ -5,7 +5,9 @@ import {
   UpdateReportType,
 } from "../types/reports";
 
-const serverPath = process.env.REACT_APP_HTTP_SERVER;
+const serverPath =
+  process.env.REACT_APP_HTTP_SERVER ||
+  "https://hrm-server-gamma.vercel.app/api";
 
 //Login Api Call
 export const addNewReport = async (reportData: ReportRequireType) => {

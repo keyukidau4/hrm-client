@@ -1,7 +1,9 @@
 import axios, { AxiosError } from "axios";
 import { UserLoginInformation } from "../types/auth";
 
-const serverPath = process.env.REACT_APP_HTTP_SERVER;
+const serverPath =
+  process.env.REACT_APP_HTTP_SERVER ||
+  "https://hrm-server-gamma.vercel.app/api";
 
 //Login Api Call
 export const login = async (formData: UserLoginInformation) => {
